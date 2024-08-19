@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+}
+
+.fix-container {
+    background-color: #333;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.fixed {
+    padding: 1.3rem;
+    background-color: white;
+    border: 1px solid black;
+    height: 5%;
+}
+
+.drag-container {
+    background-color: #333;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.draggable {
+    height: 150px;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+}
+
+.img-container {
+    height: 150px;
+    /* Set your desired fixed height */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+.img-container img {
+    width: 100%;
+    /* Ensure the image takes up the full height of the container */
+    height: 100%;
+    /* Ensure the image takes up the full width of the container */
+    object-fit: cover;
+    /* Maintain the aspect ratio and cover the container */
+}
+
+.drag-pic {
+    max-height: 120px;
+    max-width: 150px;
+    padding: 0px 5px;
+}
+
+.draggable:hover {
+    opacity: 0.5;
+}
+
+.draggable.dragging {
+    opacity: .5;
+}
+
+.draggable.dragged {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+.droppable {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+    /* background-color: #bee3f0; */
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.droppable.dropped {
+    border-style: none;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
